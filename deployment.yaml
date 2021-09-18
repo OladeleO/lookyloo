@@ -5,4 +5,3 @@ metadata:
   labels:
     app: lookyloo
   name: lookyloo
-  namespace: kustomize-test

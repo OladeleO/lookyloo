@@ -5,7 +5,7 @@ metadata:
   labels:
     app: lookyloo
   name: lookyloo
- spec:
+spec:
   replicas: 1
   selector:
     matchLabels:

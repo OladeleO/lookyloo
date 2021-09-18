@@ -5,7 +5,7 @@ metadata:
     app: lookyloo
   name: lookyloo
 spec:
-type: LoadBalancer
+  type: LoadBalancer
   ports:
   - name: http
     port: 8080
@@ -14,7 +14,8 @@ type: LoadBalancer
     protocol: TCP
   selector:
     app: lookyloo
-    
+
+
 apiVersion: v1
 kind: Service
 metadata:

@@ -5,6 +5,7 @@ metadata:
   labels:
     app: lookyloo
   name: lookyloo
+  namespace: kustomize-demo
 spec:
   ports:
   - name: http

@@ -5,3 +5,20 @@ metadata:
   labels:
     app: lookyloo
   name: lookyloo
+ spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lookyloo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp:
+      labels:
+        app: lookyloo
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

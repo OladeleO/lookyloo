@@ -3,5 +3,6 @@ namespace: kustomize-demo
 
 #The order in which the Kubernetes resources should be installed 
 resources:
+- namespace.yaml
 - deployment.yaml
 - service.yaml

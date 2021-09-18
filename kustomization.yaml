@@ -1,0 +1,7 @@
+#The namespace in which all the components should be installed 
+namespace: kustomize-demo
+
+#The order in which the Kubernetes resources should be installed 
+resources:
+- deployment.yaml
+- service.yaml

@@ -24,7 +24,7 @@ env:
   GKE_CLUSTER: padsop    # TODO: update to cluster name
   GKE_ZONE: europe-west1-b   # TODO: update to cluster zone
   DEPLOYMENT_NAME: lookyloo # TODO: update to deployment name
-  IMAGE: static-site
+  IMAGE: lookyloo-img
 
 jobs:
   setup-build-publish-deploy:

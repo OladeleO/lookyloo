@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: lookyloo
-  name: lookyloo
+  name: lookyloo-service
 spec:
   type: LoadBalancer
   ports:

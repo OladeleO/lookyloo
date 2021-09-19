@@ -4,7 +4,7 @@ metadata:
   creationTimestamp:
   labels:
     app: lookyloo
-  name: lookyloo
+  name: lookyloo-deployment
 spec:
   replicas: 1
   selector:

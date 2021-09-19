@@ -23,7 +23,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: padsop    # TODO: update to cluster name
   GKE_ZONE: europe-west1-b   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: lookyloo # TODO: update to deployment name
+  DEPLOYMENT_NAME: lookyloo-deployment # TODO: update to deployment name
   IMAGE: lookyloo-img
 
 jobs:

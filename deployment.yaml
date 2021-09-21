@@ -21,6 +21,6 @@ spec:
       # image: gcr.io/PROJECT_ID/IMAGE:TAG
       #  name: padsop
       - image: lookyloo-service
-        name: lookyloo
+        name: nginx
       #- image: lookyloo-img
       #  name: lookyloo-container

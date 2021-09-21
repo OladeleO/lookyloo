@@ -5,10 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - name: http
-      port: 8050 
-    - name: test
-      port: 4444
+    - name: webapp
+      port: 5100 
  #   protocol: TCP
   selector:
     app: lookyloo

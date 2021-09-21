@@ -4,7 +4,7 @@ metadata:
   creationTimestamp:
   labels:
     app: lookyloo
-  name: gke-deploy
+  name: lookyloo-gke-deployement
 spec:
   replicas: 1
   selector:

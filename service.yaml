@@ -6,9 +6,9 @@ spec:
   type: LoadBalancer
   ports:
     - name: http
-      port: 8050
- # - name: test
- #   port: 4444
+      port: 8050 
+    - name: test
+      port: 4444
  #   protocol: TCP
   selector:
     app: lookyloo

@@ -20,7 +20,7 @@ spec:
       containers:
       # image: gcr.io/PROJECT_ID/IMAGE:TAG
       #  name: padsop
-      - image: lookyloo-service
-        name: nginx
+      - image: nginx
+        name: padsop
       #- image: lookyloo-img
       #  name: lookyloo-container

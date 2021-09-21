@@ -20,4 +20,4 @@ spec:
       containers:
       - image: lookyloo-img
         #name: gcr.io/PROJECT_ID/IMAGE:TAG
-        name: gke-test
+        name: lookyloo

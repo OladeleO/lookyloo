@@ -22,7 +22,7 @@ spec:
       #  name: padsop
       #gcr.io/mythic-inn-323010/lookyloo-img
       #- image: gcr.io/$PROJECT_ID/$IMAGE:$TAG
-      - image: nginx
+      - image: gcr.io/$PROJECT_ID/$IMAGE:$TAG
         name: lookyloo-container
       #- image: lookyloo-img
       #  name: lookyloo-container

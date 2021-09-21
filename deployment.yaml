@@ -4,7 +4,7 @@ metadata:
   creationTimestamp:
   labels:
     app: lookyloo
-  name: gke-test
+  name: lookyloo
 spec:
   replicas: 1
   selector:

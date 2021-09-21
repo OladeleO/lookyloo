@@ -18,5 +18,7 @@ spec:
         app: lookyloo
     spec:
       containers:
-      - image: gcr.io/PROJECT_ID/IMAGE:TAG
-        name: padsop
+      # image: gcr.io/PROJECT_ID/IMAGE:TAG
+      #  name: padsop
+      - image: lookyloo-img
+        name: lookyloo-container

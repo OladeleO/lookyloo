@@ -20,7 +20,8 @@ spec:
       containers:
       # image: gcr.io/PROJECT_ID/IMAGE:TAG
       #  name: padsop
-      - image: gcr.io/PROJECT_ID/IMAGE:TAG
+      #gcr.io/mythic-inn-323010/lookyloo-img
+      - image: gcr.io/$PROJECT_ID/$IMAGE:$TAG
         name: lookyloo-container
       #- image: lookyloo-img
       #  name: lookyloo-container

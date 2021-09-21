@@ -1,5 +1,5 @@
 #The order in which the Kubernetes resources should be installed 
 resources:
 - deployment.yaml
-#- service.yaml
-- docker-compose.yml
+- service.yaml
+#- docker-compose.yml

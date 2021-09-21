@@ -6,7 +6,11 @@ spec:
   type: LoadBalancer
   ports:
     - name: webapp
-      port: 5100 
+      port: 5100
+    - name: port1
+      port: 8050
+    - name: port2
+      port: 5023
  #   protocol: TCP
   selector:
     app: lookyloo

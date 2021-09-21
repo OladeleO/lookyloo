@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp:
   labels:
-    app: lookyloo-img
+    app: lookyloo
   name: lookyloo-gke-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lookyloo-img
+      app: lookyloo
   strategy: {}
   template:
     metadata:
       creationTimestamp:
       labels:
-        app: lookyloo-img
+        app: lookyloo
     spec:
       containers:
       # image: gcr.io/PROJECT_ID/IMAGE:TAG

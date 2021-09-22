@@ -71,6 +71,7 @@ jobs:
         GOOGLE_CREDENTIALS: ${{ secrets.TF_API_TOKEN }}
   
   setup-build-publish-deploy:
+    needs: [terraform]
     name: Setup, Build Publish and Deploy
     runs-on: ubuntu-latest
     environment: production
@@ -163,6 +164,7 @@ jobs:
         
   
   sast:
+    needs: [setup-build-publish-deploy]
     runs-on: ubuntu-latest
     name: sast
     steps:

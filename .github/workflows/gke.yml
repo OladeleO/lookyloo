@@ -56,8 +56,10 @@ jobs:
       with:
         # Source directory to scan. Defaults to workspace
         #src: # optional, default is /github/workspace
+        src: OladeleO/lookyloo # optional, default is /github/workspace
         # Output directory for the generated reports. Defaults to reports
         #output: # optional, default is /github/workspace/reports
+        output: OladeleO/lookyloo/sast-reports/ # optional, default is /github/workspace/reports
         # Project type. Eg: java, python, nodejs. Comma separated values allowed.
         type: python # optional
 

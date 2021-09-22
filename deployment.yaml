@@ -6,7 +6,7 @@ metadata:
     app: lookyloo
   name: lookyloo-gke-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: lookyloo

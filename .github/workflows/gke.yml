@@ -46,6 +46,24 @@ jobs:
     # helper for authentication
     - run: |-
         gcloud --quiet auth configure-docker
+        
+#######################################################################
+
+    - name: sast-scan
+      # You may pin to the exact commit or the version.
+      # uses: AppThreat/sast-scan-action@4d0f956e6ba3c940a22679fd8fe7cb2e755f3d96
+      uses: AppThreat/sast-scan-action@1.0.2
+      #with:
+        # Source directory to scan. Defaults to workspace
+        #src: # optional, default is /github/workspace
+        # Output directory for the generated reports. Defaults to reports
+        #output: # optional, default is /github/workspace/reports
+        # Project type. Eg: java, python, nodejs. Comma separated values allowed.
+        #type: # optional
+
+
+
+#######################################################################
 
     # Get the GKE credentials so we can deploy to the cluster
     - uses: google-github-actions/get-gke-credentials@v0.2.1

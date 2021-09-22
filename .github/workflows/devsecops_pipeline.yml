@@ -27,8 +27,9 @@ env:
   IMAGE: lookyloo-img
 
 jobs:
-  setup-build-check-sast-publish-deploy:
-    name: Setup, Build, Check, SAST, Publish and Deploy
+  
+  setup-build-publish-deploy:
+    name: Setup, Build Publish and Deploy
     runs-on: ubuntu-latest
     environment: production
 
@@ -47,16 +48,13 @@ jobs:
     # helper for authentication
     - run: |-
         gcloud --quiet auth configure-docker
-    - uses: actions/upload-artifact@v2
-      with:
-        path: scanreport.txt
         
 #######################################################################
     #Sensitive info checks
-    - name: sensitive-info-check
-      uses: actions/checkout@master
-    - name: Check password
-      uses: AlicanAkkus/pinder-action@0.1
+#    - name: sensitive-info-check
+#      uses: actions/checkout@master
+#    - name: Check password
+#      uses: AlicanAkkus/pinder-action@0.1
       
 
 #    - name: sast-scan
@@ -111,3 +109,29 @@ jobs:
         ./kustomize build . | kubectl apply -f -
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
+        
+        
+  sensitive-info-check:
+    runs-on: ubuntu-latest
+    name: sensitive-info-check
+    steps:
+      - uses: actions/checkout@master
+      - name: Check password
+        uses: AlicanAkkus/pinder-action@0.1
+        
+  
+  sast:
+    runs-on: ubuntu-latest
+    name: sast
+    steps:
+    # Setup gcloud CLI
+    - name: Setup gcloud CLI
+      uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
+      with:
+        service_account_key: ${{ secrets.GKE_SA_KEY }}
+        project_id: ${{ secrets.GKE_PROJECT }} 
+    - run: |-
+        gcloud --quiet beta container images describe gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA --show-package-vulnerability > scanreport.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        path: scanreport.txt

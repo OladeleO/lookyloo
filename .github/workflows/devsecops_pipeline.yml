@@ -42,10 +42,14 @@ jobs:
         service_account_key: ${{ secrets.GKE_SA_KEY }}
         project_id: ${{ secrets.GKE_PROJECT }}
 
+
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
     - run: |-
         gcloud --quiet auth configure-docker
+    - uses: actions/upload-artifact@v2
+      with:
+        path: scanreport.txt
         
 #######################################################################
     #Sensitive info checks
@@ -53,20 +57,6 @@ jobs:
       uses: actions/checkout@master
     - name: Check password
       uses: AlicanAkkus/pinder-action@0.1
-      
-   #SAST
-    - name: SAST
-      steps:
-      - name : Setup gcloud CLI
-        uses: google-github-actions/setup-gcloud@v0.2.0
-        with:
-          service_account_key: ${{ secrets.GKE_SA_KEY }}
-          project_id: ${{ secrets.GKE_PROJECT }}
-      - run: |-
-          gcloud --quiet auth configure-docker
-      - uses: actions/upload-artifact@v2
-        with:
-          path: scanreport.txt
       
 
 #    - name: sast-scan

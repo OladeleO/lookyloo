@@ -1,4 +1,4 @@
-   #Example `main.tf`:
+   #Example 'main.tf':
      # The configuration for the `remote` backend.
      terraform {
        backend "remote" {

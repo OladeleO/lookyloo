@@ -48,10 +48,12 @@ jobs:
         gcloud --quiet auth configure-docker
         
 #######################################################################
-
-      #uses: actions/checkout@master
-    - name: Check password
-      uses: AlicanAkkus/pinder-action@0.1
+  sensitivecheck:
+    name: sensitive-info-check
+    steps:
+      - uses: actions/checkout@master
+      - name: Check password
+        uses: AlicanAkkus/pinder-action@0.1
 
 #    - name: sast-scan
  #     # You may pin to the exact commit or the version.

@@ -49,19 +49,19 @@ jobs:
         
 #######################################################################
 
-    - name: sast-scan
-      # You may pin to the exact commit or the version.
+#    - name: sast-scan
+ #     # You may pin to the exact commit or the version.
       # uses: AppThreat/sast-scan-action@4d0f956e6ba3c940a22679fd8fe7cb2e755f3d96
-      uses: AppThreat/sast-scan-action@1.0.2
-      with:
+#      uses: AppThreat/sast-scan-action@1.0.2
+#      with:
         # Source directory to scan. Defaults to workspace
         #src: # optional, default is /github/workspace
-        src: https://github.com/OladeleO/lookyloo/tree/main/lookyloo # optional, default is /github/workspace
+ #       src: https://github.com/OladeleO/lookyloo/tree/main/lookyloo # optional, default is /github/workspace
         # Output directory for the generated reports. Defaults to reports
         #output: # optional, default is /github/workspace/reports
-        output: https://github.com/OladeleO/lookyloo/tree/main/sast-report # optional, default is /github/workspace/reports
+  #      output: https://github.com/OladeleO/lookyloo/tree/main/sast-report # optional, default is /github/workspace/reports
         # Project type. Eg: java, python, nodejs. Comma separated values allowed.
-        type: python # optional
+   #     type: python # optional
 
 
 

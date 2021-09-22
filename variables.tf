@@ -11,7 +11,7 @@ variable "zone" {
 }
 
 variable "cidr" {
-  defualt = "10.0.0.0/16"
+  default = "10.0.0.0/16"
 }
 
 variable "gke_cluster_name" {
